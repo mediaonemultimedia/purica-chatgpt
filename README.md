@@ -34,15 +34,17 @@ We use **Vercel** for hosting because it is secure, fast, and requires zero serv
 3.  Select the repository you just forked (e.g., `client-assistant-dist`) and click **Import**.
 
 ### Step C: Configure Environment Variables (Crucial)
-On the configuration screen, look for the **Environment Variables** section. You must add the following two variables for the app to work:
+On the configuration screen, look for the **Environment Variables** section. You must add the following **four** variables:
 
 | Variable Name | Value Description |
 | :--- | :--- |
-| **`OPENAI_API_KEY`** | Paste the `sk-...` key you generated in the Prerequisites step. |
-| **`ALLOWED_ORIGIN`** | The specific URL of your Shopify store where the bot will live (e.g., `https://www.purica.com` or `https://stag-purica.myshopify.com`). <br>*If you are testing locally, you can use `*` to allow all websites, but we recommend the specific URL for security.* |
+| **`OPENAI_API_KEY`** | Paste the `sk-...` key you generated in the Prerequisites. |
+| **`ALLOWED_ORIGIN`** | The specific URL of your Shopify store (e.g., `https://purica.com`). <br> *Use `*` if testing locally.* |
+| **`OPENAI_PROMPT_ID_PURICA`** | Paste the **Assistant ID** (`asst_...`) generated from steps taken in your model_setup.md file.  <br>*(This serves as the unique ID for your AI Assistant, and points to the prompt).* |
+| **`OPENAI_VECTOR_STORE_ID_PURICA`** | Paste the **Vector Store ID** (`vs_...`) fgenerated from steps taken in your model_setup.md file.  |
 
 1.  Enter the Name and Value for the first variable, then click **Add**.
-2.  Repeat for the second variable.
+2.  Repeat for all four variables.
 3.  Click **Deploy**.
 
 *The deployment will take about 1 minute. Once complete, Vercel will provide a URL (e.g., `https://your-project.vercel.app`). Copy this URL.*
