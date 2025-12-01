@@ -14,17 +14,12 @@
     }
   ],
   "routes": [
-    {
-      "src": "/_next/static/(.*)",
-      "dest": "/.next/static/$1"
+    { 
+      "handle": "filesystem" 
     },
-    {
-      "src": "/favicon.ico",
-      "dest": "/public/favicon.ico"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/server.js"
+    { 
+      "src": "/(.*)", 
+      "dest": "/server.js" 
     }
   ]
 }
